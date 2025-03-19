@@ -1,0 +1,108 @@
+/* 🎨 Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1DB954, #191414);
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+/* 📦 Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 📝 Headings */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* 🎵 Styles for Index Page */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #17a74a;
+}
+
+/* 🎶 Styles for Result Page */
+.songs-container {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.song-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.song-item {
+    display: none;
+    background: #1DB954;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ❌ No Songs Found */
+.no-songs {
+    font-size: 18px;
+    color: #ff5e5e;
+}
+
+/* 🔙 Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #1DB954;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #17a74a;
+}

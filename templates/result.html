@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Your Recommended Songs 🎶</h1>
+
+        <div class="songs-container">
+            {% if songs %}
+                <ul class="song-list">
+                    {% for song in songs %}
+                        <li class="song-item">{{ song }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-songs">😔 No recommendations found. Try again!</p>
+            {% endif %}
+        </div>
+
+        <a href="/" class="back-btn">🔙 Go Back</a>
+    </div>
+
+    <!-- 🎨 Animated Song List -->
+    <script>
+        $(document).ready(function(){
+            $(".song-item").each(function(index) {
+                $(this).delay(200 * index).fadeIn(800);
+            });
+        });
+    </script>
+</body>
+</html>
